@@ -11,7 +11,7 @@ private:
 
     int accountNumber;
     string accountHolderName;
-    double balace;
+    double balance;
     vector<Transaction> transactionHistory;
 
 public:
@@ -22,7 +22,7 @@ public:
     void display() const;
     void displayTransactionHistory() const;
     int getAccountNumber() const;
-    double getBalanace() const;
+    double getBalance() const;
     string getAccountHolderName() const;
     void updateAccountHolderName(const string &newName);
     
