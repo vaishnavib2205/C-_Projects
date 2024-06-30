@@ -12,7 +12,7 @@ void displayAllAccounts(const vector<Account>& accounts);
 void deleteAccount(vector<Account>& accounts);
 
 int main() {
-    vector<Account> accounts = FileHandler::loadAccounts();
+    vector<Account> accounts = FileHandler::loadAccountsFromFile();
     int choice;
 
     do {
@@ -34,7 +34,7 @@ int main() {
                     deleteAccount(accounts);
                     break;
                 case 5:
-                    FileHandler::saveAccounts(accounts);
+                    FileHandler::saveAccountsToFile(accounts);
                     cout << "Accounts saved successfully. Exiting...\n";
                     break;
                 default:
