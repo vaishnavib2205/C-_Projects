@@ -5,7 +5,8 @@ void displayMenu() {
     std::cout << "1. Add Contact" << std::endl;
     std::cout << "2. Display All Contacts" << std::endl;
     std::cout << "3. Search Contact" << std::endl;
-    std::cout << "4. Exit" << std::endl;
+    std::cout << "4. Delete Contact" << std::endl; // New menu option
+    std::cout << "5. Exit" << std::endl;
 }
 
 int main() {
@@ -18,11 +19,11 @@ int main() {
 
         if (choice == 1) {
             std::string name, phone, email;
-            std::cout << "Enter Name: \n";
+            std::cout << "Enter Name: ";
             std::cin >> name;
-            std::cout << "Enter Phone: \n";
+            std::cout << "Enter Phone: ";
             std::cin >> phone;
-            std::cout << "Enter Email: \n";
+            std::cout << "Enter Email: ";
             std::cin >> email;
             manager.addContact(Contact(name, phone, email));
         } else if (choice == 2) {
@@ -32,8 +33,12 @@ int main() {
             std::cout << "Enter Name to Search: ";
             std::cin >> name;
             manager.searchContact(name);
-            break;
-        } else if (choice == 4) {
+        } else if (choice == 4) { // Handling delete contact option
+            std::string name;
+            std::cout << "Enter Name to Delete: ";
+            std::cin >> name;
+            manager.deleteContact(name);
+        } else if (choice == 5) {
             break;
         } else {
             std::cout << "Invalid choice. Please try again." << std::endl;

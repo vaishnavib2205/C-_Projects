@@ -1,6 +1,7 @@
 #include "ContactManager.h"
 #include <fstream>
 #include <iostream>
+using namespace std;
 
 ContactManager::ContactManager() {
     loadContacts();
@@ -32,6 +33,17 @@ void ContactManager::addContact(const Contact& contact) {
     saveContacts();
 }
 
+void ContactManager::deleteContact(const std::string& name){
+    for (auto contact = contacts.begin(); contact <= contacts.end(); ++contact) {
+        if (contact->getName() == name) {
+            contacts.erase(contact);
+            saveContacts();
+            std::cout << "Contact deleted successfully." << std::endl;
+            return;
+        }
+    }
+    std::cout << "Contact not found." << std::endl;
+}
 void ContactManager::displayContacts() const {
     for (const auto& contact : contacts) {
         contact.display();
