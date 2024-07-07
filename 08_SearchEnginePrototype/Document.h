@@ -1,5 +1,3 @@
-// Document.h
-
 #define DOCUMENT_H
 
 #include <string>
@@ -10,7 +8,7 @@ private:
     std::string content;
 
 public:
-    Document(const std::string& title, const std::string& content);
+    Document(const std::string& title, const std::string& filePath);
     std::string getTitle() const;
     std::string getContent() const;
 };

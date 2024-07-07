@@ -1,0 +1,32 @@
+A new type of rendering primitive was invented by Bill Reeves and his colleagues at Lucasfilm in the early 1980s as they struggled to come up with a 
+way to animate the fire sequence called “The Genesis Demo” in the motion 
+picture Star Trek II: The Wrath of Khan. Traditional rendering methods were 
+more suitable for rendering smooth, well-defined surfaces.What Reeves was 
+after was a way to render a class of objects he called “fuzzy”—things like fire, 
+smoke, liquid spray, comet tails, fireworks, and other natural phenomena. 
+These things are fuzzy because none of them has a well-defined boundary 
+and the components typically change over time.
+The technique that Reeves invented to solve this problem was described in 
+the 1983 paper Particle Systems—A Technique for Modeling a Class of Fuzzy 
+Objects. PARTICLE SYSTEMS had been used in rendering before, but Reeves realized that he could get the particles to behave the way he wanted them to by 
+giving each particle its own set of initial conditions and by establishing a set 
+of probabilistic rules that governed how particles would change over time. 
+There are three main differences between particle systems and traditional 
+surface-based rendering techniques. First, rather than an object being 
+defined with polygons or curved surfaces, it is represented by a cloud of 
+primitive particles that define its volume. Second, the object is considered 
+dynamic rather than static. The constituent particles come into existence, 
+evolve, and then die. During their lifetime, they can change position and 
+form. Finally, objects defined in this manner are not completely specified. 
+A set of initial conditions are specified, along with rules for birth, death, and 
+evolution. Stochastic processes are used to influence all three stages, so the 
+shape and appearance of the object is nondeterministic. 
+Some assumptions are usually made to simplify the rendering of particle 
+systems, among them,
+• Particles do not collide with other particles.
+• Particles do not reflect light; they emit light.
+• Particles do not cast shadows on other particles.
+Particle attributes often include position, color, transparency, velocity, size, 
+shape, and lifetime. For rendering a particle system, each particle’s attributes 
+are used along with certain global parameters to update its position and 
+appearance at each frame
