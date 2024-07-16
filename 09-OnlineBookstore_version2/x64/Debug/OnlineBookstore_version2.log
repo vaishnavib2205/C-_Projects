@@ -1,0 +1,13 @@
+﻿  Book.cpp
+  Database.cpp
+  main.cpp
+  Order.cpp
+D:\MYCPP\ProjectsInCPP\CPP_Projects\09-OnlineBookstore_version2\Order.cpp(15,14): error C2039: 'cerr': is not a member of 'std'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(26,1): message : see declaration of 'std'
+D:\MYCPP\ProjectsInCPP\CPP_Projects\09-OnlineBookstore_version2\Order.cpp(15,14): error C2065: 'cerr': undeclared identifier
+D:\MYCPP\ProjectsInCPP\CPP_Projects\09-OnlineBookstore_version2\Order.cpp(15,92): error C2039: 'endl': is not a member of 'std'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(26,1): message : see declaration of 'std'
+D:\MYCPP\ProjectsInCPP\CPP_Projects\09-OnlineBookstore_version2\Order.cpp(15,92): error C2065: 'endl': undeclared identifier
+  User.cpp
+D:\MYCPP\ProjectsInCPP\CPP_Projects\09-OnlineBookstore_version2\User.cpp(3,10): fatal  error C1083: Cannot open include file: 'sqlite3.h': No such file or directory
+  Generating Code...
